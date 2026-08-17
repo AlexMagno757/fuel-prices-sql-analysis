@@ -5,7 +5,7 @@ A comprehensive relational database project designed to store, clean, validate, 
 * **Official Portal:** https://dados.gov.br/dados/conjuntos-dados/serie-historica-de-precos-de-combustiveis-e-de-glp
 * **Specific Resource Used:** 1º Semestre de 2004 - Combustíveis Automotivos
 
-## 🛠️ Tech Stack
+## 🔧  Tech Stack
 * **Database Management System:** PostgreSQL
 * **Language/Scripting:** SQL, PL/pgSQL
 * **Tools:** pgAdmin 4
@@ -30,7 +30,7 @@ T* **Procedures:** Handles bulk price updates and blocks duplicate CEP entries.
 
 ---
 
-## 🚀 How to Run and Test
+## 🏃 How to Run and Test
 
 Follow the execution order below in your PostgreSQL / pgAdmin environment to build the database from scratch:
 
