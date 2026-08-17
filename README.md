@@ -2,8 +2,6 @@
 
 A comprehensive relational database project designed to store, clean, validate, and analyze historical fuel price data in Brazil. The dataset originates from the National Agency of Petroleum, Natural Gas and Biofuels (ANP).
 
-This project goes beyond basic CRUD operations, demonstrating advanced database engineering concepts such as strict **3NF (Third Normal Form)** normalization, an **ETL pipeline** from raw staging data, automated business rules via **Triggers**, and custom data integrity logic using **Stored Procedures** in PostgreSQL.
-
 ## 🛠️ Tech Stack
 * **Database Management System:** PostgreSQL
 * **Language/Scripting:** SQL, PL/pgSQL
