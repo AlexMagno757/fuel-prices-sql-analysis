@@ -17,16 +17,16 @@ The raw data provided by the ANP was heavily denormalized. To eliminate data red
 
 1. **`REGIAO` & `ESTADO`**: Geographic hierarchy of Brazil.
 2. **`LOCAL`**: Maps postal codes (CEPs) to specific municipalities and states.
-3. **`REVENDA`**: Contains normalized cadastro data for individual fuel stations, linked to postal codes.
+3. **`REVENDA`**: Normalized station records linked to local postal codes.
 4. **`PRODUTO`**: Catalog of fuel types (gasoline, ethanol, diesel, GNV) with unique identifiers.
-5. **`PRECO`**: The core transactional table recording prices, collection dates, and measurement units using a composite primary key.
+5. **`PRECO`**: A transactional table recording prices, collection dates, and measurement units using a composite primary key.
 
 ---
 
 ## ⚙️ Backend Engineering (PL/pgSQL)
 
-T* **Procedures:** Handles automated mass price updates and prevents duplicate CEP insertions.
-* **Triggers:** Validates that selling prices are greater than zero and never below purchasing prices, while automatically logging historical updates into an audit table.
+T* **Procedures:** Handles bulk price updates and blocks duplicate CEP entries.
+* **Triggers:** Validates that selling prices are greater than zero and never drop below purchasing costs, while automatically logging historical updates to an audit table.
 
 ---
 
