@@ -1,4 +1,4 @@
-# Brazilian Fuel Prices: Database Modeling & Analysis
+# Brazilian Fuel Prices: Database Analysis
 
 A comprehensive relational database project designed to store, clean, validate, and analyze historical fuel price data in Brazil. The dataset originates from the National Agency of Petroleum, Natural Gas and Biofuels (ANP).
 
