@@ -40,3 +40,24 @@ JOIN revenda rv ON l.cep = rv.cep
 GROUP BY l.municipio, e.estado_sigla
 HAVING COUNT(rv.cnpj_revenda) > 5
 ORDER BY total_revendas DESC;
+
+-- Query 4: Highway service stations selling GNV and their average product prices
+SELECT rv.nomerevenda, l.municipio, e.estado_sigla, p.nomeproduto,
+       AVG(pr.valor_venda) AS preco_medio,
+       pr.unidade_medida, rv.nome_rua
+FROM revenda rv
+JOIN local l ON rv.cep = l.cep
+JOIN estado e ON l.estado_sigla = e.estado_sigla
+JOIN preco pr ON rv.cnpj_revenda = pr.cnpj_revenda
+JOIN produto p ON pr.id_produto = p.id_produto
+WHERE rv.nome_rua LIKE '%RODOVIA%'
+  AND rv.cnpj_revenda IN (
+      SELECT pr2.cnpj_revenda
+      FROM preco pr2
+      JOIN produto p2 ON pr2.id_produto = p2.id_produto
+      WHERE p2.nomeproduto LIKE '%GNV%'
+      GROUP BY pr2.cnpj_revenda
+  )
+GROUP BY rv.nomerevenda, l.municipio, e.estado_sigla, p.nomeproduto,
+         pr.unidade_medida, rv.nome_rua
+ORDER BY e.estado_sigla, l.municipio, rv.nomerevenda, p.nomeproduto;
