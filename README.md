@@ -2,7 +2,7 @@
 
 A comprehensive relational database project designed to store, clean, validate, and analyze historical fuel price data in Brazil. The dataset originates from the National Agency of Petroleum, Natural Gas and Biofuels (ANP).
 
-* **Official Portal:** [Dados.gov.br - Série Histórica de Preços de Combustíveis]https://dados.gov.br/dados/conjuntos-dados/serie-historica-de-precos-de-combustiveis-e-de-glp
+* **Official Portal:** https://dados.gov.br/dados/conjuntos-dados/serie-historica-de-precos-de-combustiveis-e-de-glp
 * **Specific Resource Used:** 1º Semestre de 2004 - Combustíveis Automotivos
 
 ## 🛠️ Tech Stack
