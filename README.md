@@ -25,7 +25,7 @@ The raw data provided by the ANP was heavily denormalized. To eliminate data red
 
 ## ⚙️ Backend Engineering (PL/pgSQL)
 
-T* **Procedures:** Handles bulk price updates and blocks duplicate CEP entries.
+* **Procedures:** Handles bulk price updates and blocks duplicate CEP entries.
 * **Triggers:** Validates that selling prices are greater than zero and never drop below purchasing costs, while automatically logging historical updates to an audit table.
 
 ---
