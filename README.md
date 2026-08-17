@@ -23,7 +23,7 @@ The raw data provided by the ANP was heavily denormalized. To eliminate data red
 
 ---
 
-## ⚙️ Advanced Backend Engineering (PL/pgSQL)
+## ⚙️ Backend Engineering (PL/pgSQL)
 
 The database enforces automated business rules and auditing directly at the engine level:
 
