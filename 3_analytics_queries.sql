@@ -41,7 +41,7 @@ GROUP BY l.municipio, e.estado_sigla
 HAVING COUNT(rv.cnpj_revenda) > 5
 ORDER BY total_revendas DESC;
 
--- Query 4: Highway service stations selling GNV and their average product prices
+-- Query 4: Highway service stations selling GNV and their average product price
 SELECT rv.nomerevenda, l.municipio, e.estado_sigla, p.nomeproduto,
        AVG(pr.valor_venda) AS preco_medio,
        pr.unidade_medida, rv.nome_rua
